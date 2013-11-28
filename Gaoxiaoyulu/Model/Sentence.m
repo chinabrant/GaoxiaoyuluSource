@@ -11,7 +11,7 @@
 @implementation Sentence
 
 - (void)print {
-    NSLog(@"[Sentence ==> id: %d  content: %@  time: %@  author: %@]", self.sentenceId, self.content, self.time, self.author);
+    NSLog(@"[Sentence ==>  content: %@  time: %@  author: %@]", self.content, self.time, self.author);
 }
 
 @end

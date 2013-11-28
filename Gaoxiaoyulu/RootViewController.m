@@ -22,6 +22,7 @@
         // Custom initialization
         items = [[NSMutableArray alloc] initWithCapacity:0];
         sentences = [[NSMutableArray alloc] initWithCapacity:0];
+        currentPage = 1;
     }
     return self;
 }
@@ -29,7 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIBarButtonItem *settingsItem = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStyleBordered target:self action:@selector(clickSettings:)];
+    UIBarButtonItem *settingsItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStyleBordered target:self action:@selector(clickSettings:)];
     self.navigationItem.rightBarButtonItem = settingsItem;
 
     self.title = @"语录列表";
@@ -37,22 +38,33 @@
     mTableView.dataSource = self;
     
     [mTableView addPullToRefreshWithActionHandler:^{
-        [self requestSentences];
+        [self readSentences];
         isLoadingMore = YES;
     } position:SVPullToRefreshPositionBottom];
     
-    request = [[NetRequest alloc] init];
-    request.delegate = self;
-    [request requestItems];
+    [self readSentences];
 }
 
-- (void)requestSentences {
-    if (request == nil) {
-        request = [[NetRequest alloc] init];
-        request.delegate = self;
+- (void)readSentences {
+    sentencesReader = [[SentencesReader alloc] init];
+    sentencesReader.delegate = self;
+    [sentencesReader readSentencesWithPage:currentPage];
+}
+
+#pragma mark - SentencesReaderDelegate
+- (void)didFinishReaderSentences:(NSArray *)sents {
+    if (isLoadingMore) {
+        isLoadingMore = NO;
+        [mTableView.pullToRefreshView stopAnimating];
     }
     
-    [request requestSentenceWithItem:[items objectAtIndex:1]];
+    if (sents == nil) {
+        return;
+    }
+
+    [sentences addObjectsFromArray:sents];
+    [mTableView reloadData];
+    currentPage++;
 }
 
 #pragma mark - UITableViewDataSource
@@ -87,36 +99,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - NetRequestDelegate
-- (void)didFinishGetItems:(NSArray *)items1 {
-    [items addObjectsFromArray:items1];
-}
-
-- (void)didFinishGetSentences:(NSArray *)sents {
-    if (sents) {
-        [sentences addObjectsFromArray:sents];
-        if (isLoadingMore) {
-            isLoadingMore = NO;
-            [mTableView.pullToRefreshView stopAnimating];
-        }
-    } else {
-        NSLog(@"sentences is nil");
-    }
-    
-    [mTableView reloadData];
-}
-
-- (void)didFailedRequestItems {
-    
-}
-
-- (void)didFailedRequestSentences {
-    if (isLoadingMore) {
-        isLoadingMore = NO;
-        [mTableView.pullToRefreshView stopAnimating];
-    }
 }
 
 - (void)clickSettings:(id)sender {

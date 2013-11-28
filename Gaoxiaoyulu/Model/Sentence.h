@@ -23,6 +23,7 @@
 @property (nonatomic, copy) NSString *content;
 @property (nonatomic, copy) NSString *time;
 @property (nonatomic, copy) NSString *author;
+@property (nonatomic, copy) NSString *objectId;
 
 - (void)print;
 

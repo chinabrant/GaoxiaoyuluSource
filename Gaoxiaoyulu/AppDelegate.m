@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import "BmobQuery.h"
 
 @implementation AppDelegate
 
@@ -17,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Bmob registWithAppKey:@"148a3df5353e7fbe204c652463ebeda5"];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
@@ -26,7 +29,28 @@
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+//    [self testBmob];
     return YES;
+}
+
+- (void)testBmob {
+    NSLog(@"开始查找数据");
+    BmobQuery   *bquery = [BmobQuery queryWithClassName:@"yulu"];
+    [bquery orderByDescending:@"createdAt"];
+    [bquery setLimit:10];
+    [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, BOOL isSuccessful) {
+        NSLog(@"back");
+        if (isSuccessful) {
+            for (BmobObject *obj in array) {
+                NSLog(@"objectId = %@   content = %@", obj.objectId, [obj objectForKey:@"content"]);
+                NSLog(@"author = %@  time: %@", [obj objectForKey:@"author"], [obj objectForKey:@"updatedAt"]);
+                NSLog(@"-----------------------------------------------------------------------------------------------------");
+            }
+        } else {
+            NSLog(@"查询失败");
+        }
+    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

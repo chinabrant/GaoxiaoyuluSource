@@ -35,7 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = [NSString stringWithFormat:@"%d", sentence.sentenceId];
+    self.title = [NSString stringWithFormat:@"%@", sentence.author];
 
     self.contentLabel.text = sentence.content;
     self.timeLabel.text = sentence.time;

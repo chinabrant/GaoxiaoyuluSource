@@ -35,7 +35,7 @@
 
 - (void)bindData:(Sentence *)sentence {
     sen = sentence;
-    contentLabel.text = [NSString stringWithFormat:@"%d、%@", sen.sentenceId, sen.content];
+    contentLabel.text = [NSString stringWithFormat:@"%@", sentence.content];
     timeLabel.text = sen.time;
     authorLabel.text = [NSString  stringWithFormat:@"来自:%@", sen.author];
 }
