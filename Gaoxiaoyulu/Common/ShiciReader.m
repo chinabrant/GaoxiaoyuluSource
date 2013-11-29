@@ -22,7 +22,7 @@
         NSLog(@"back");
         if (isSuccessful) {
             NSLog(@"读取成功 count : %d", array.count);
-//            NSMutableArray *arr = [[NSMutableArray alloc] initWithCapacity:0];
+            NSMutableArray *arr = [[NSMutableArray alloc] initWithCapacity:0];
             for (BmobObject *obj in array) {
                 Shici *sc = [[Shici alloc] init];
                 sc.content = [obj objectForKey:Shici_Content];
@@ -31,6 +31,15 @@
                 sc.message = [obj objectForKey:Shici_Message];
                 sc.createdAt = [obj objectForKey:Shici_CreatedAt];
                 [sc print];
+                [arr addObject:sc];
+            }
+            
+            if (self.delegate && [self.delegate respondsToSelector:@selector(didFinishReadShici:)]) {
+                [self.delegate didFinishReadShici:arr];
+            }
+        } else {
+            if (self.delegate && [self.delegate respondsToSelector:@selector(didFinishReadShici:)]) {
+                [self.delegate didFinishReadShici:nil];
             }
         }
     }];

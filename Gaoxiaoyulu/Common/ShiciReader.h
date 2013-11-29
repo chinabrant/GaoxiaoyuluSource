@@ -9,7 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "Shici.h"
 
+@protocol ShiciReaderDelegate <NSObject>
+
+- (void)didFinishReadShici:(NSArray *)scs;
+
+@end
+
 @interface ShiciReader : NSObject
+
+@property (nonatomic, assign) id<ShiciReaderDelegate> delegate;
 
 - (void)readShiciWithPage:(int)page;
 

@@ -43,8 +43,17 @@
 		58FD75501846DB2C00E04485 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FD754F1846DB2C00E04485 /* CoreLocation.framework */; };
 		58FD75521846DB3C00E04485 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FD75511846DB3C00E04485 /* Security.framework */; };
 		58FD75541846DB5700E04485 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FD75531846DB5700E04485 /* CoreTelephony.framework */; };
-		58FD755E1846DBA900E04485 /* libBmobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FD755D1846DBA900E04485 /* libBmobSDK.a */; };
 		58FD75611846EA0D00E04485 /* SentencesReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FD75601846EA0D00E04485 /* SentencesReader.m */; };
+		615BF5D91848C7EB00A0F53C /* libBmobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 615BF5D81848C7EB00A0F53C /* libBmobSDK.a */; };
+		615BF5DD1848CA3B00A0F53C /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 615BF5DC1848CA3B00A0F53C /* IIViewDeckController.m */; };
+		615BF5E01848CAFE00A0F53C /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 615BF5DF1848CAFE00A0F53C /* MenuViewController.m */; };
+		615BF5E51848CB7100A0F53C /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 615BF5E21848CB7100A0F53C /* IISideController.m */; };
+		615BF5E61848CB7100A0F53C /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 615BF5E41848CB7100A0F53C /* IIWrapController.m */; };
+		615BF5EA1848D81400A0F53C /* ShiciListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 615BF5E81848D81400A0F53C /* ShiciListViewController.m */; };
+		615BF5EB1848D81400A0F53C /* ShiciListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 615BF5E91848D81400A0F53C /* ShiciListViewController.xib */; };
+		615BF5EE1848DC2600A0F53C /* ShiciListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 615BF5ED1848DC2600A0F53C /* ShiciListCell.m */; };
+		615BF5F21848E6F700A0F53C /* ShiciDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 615BF5F01848E6F700A0F53C /* ShiciDetailViewController.m */; };
+		615BF5F31848E6F700A0F53C /* ShiciDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 615BF5F11848E6F700A0F53C /* ShiciDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,9 +124,25 @@
 		58FD755A1846DBA900E04485 /* BmobObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BmobObject.h; sourceTree = "<group>"; };
 		58FD755B1846DBA900E04485 /* BmobQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BmobQuery.h; sourceTree = "<group>"; };
 		58FD755C1846DBA900E04485 /* BmobUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BmobUser.h; sourceTree = "<group>"; };
-		58FD755D1846DBA900E04485 /* libBmobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBmobSDK.a; sourceTree = "<group>"; };
 		58FD755F1846EA0D00E04485 /* SentencesReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SentencesReader.h; sourceTree = "<group>"; };
 		58FD75601846EA0D00E04485 /* SentencesReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SentencesReader.m; sourceTree = "<group>"; };
+		615BF5D81848C7EB00A0F53C /* libBmobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBmobSDK.a; sourceTree = "<group>"; };
+		615BF5DB1848CA3B00A0F53C /* IIViewDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIViewDeckController.h; sourceTree = "<group>"; };
+		615BF5DC1848CA3B00A0F53C /* IIViewDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIViewDeckController.m; sourceTree = "<group>"; };
+		615BF5DE1848CAFE00A0F53C /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		615BF5DF1848CAFE00A0F53C /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		615BF5E11848CB7100A0F53C /* IISideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IISideController.h; sourceTree = "<group>"; };
+		615BF5E21848CB7100A0F53C /* IISideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IISideController.m; sourceTree = "<group>"; };
+		615BF5E31848CB7100A0F53C /* IIWrapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIWrapController.h; sourceTree = "<group>"; };
+		615BF5E41848CB7100A0F53C /* IIWrapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIWrapController.m; sourceTree = "<group>"; };
+		615BF5E71848D81400A0F53C /* ShiciListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShiciListViewController.h; sourceTree = "<group>"; };
+		615BF5E81848D81400A0F53C /* ShiciListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShiciListViewController.m; sourceTree = "<group>"; };
+		615BF5E91848D81400A0F53C /* ShiciListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShiciListViewController.xib; sourceTree = "<group>"; };
+		615BF5EC1848DC2600A0F53C /* ShiciListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShiciListCell.h; sourceTree = "<group>"; };
+		615BF5ED1848DC2600A0F53C /* ShiciListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShiciListCell.m; sourceTree = "<group>"; };
+		615BF5EF1848E6F700A0F53C /* ShiciDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShiciDetailViewController.h; sourceTree = "<group>"; };
+		615BF5F01848E6F700A0F53C /* ShiciDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShiciDetailViewController.m; sourceTree = "<group>"; };
+		615BF5F11848E6F700A0F53C /* ShiciDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShiciDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +158,7 @@
 				589A569A1845A424002E056F /* SystemConfiguration.framework in Frameworks */,
 				589A56981845A41C002E056F /* CFNetwork.framework in Frameworks */,
 				589A564218459FE0002E056F /* CoreGraphics.framework in Frameworks */,
-				58FD755E1846DBA900E04485 /* libBmobSDK.a in Frameworks */,
+				615BF5D91848C7EB00A0F53C /* libBmobSDK.a in Frameworks */,
 				589A564618459FE0002E056F /* CoreData.framework in Frameworks */,
 				589A564418459FE0002E056F /* UIKit.framework in Frameworks */,
 				589A564018459FE0002E056F /* Foundation.framework in Frameworks */,
@@ -242,6 +267,7 @@
 		589A56741845A09A002E056F /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				615BF5DA1848CA2D00A0F53C /* IIViewDeckController */,
 				58FD75551846DB9800E04485 /* Bmob */,
 				589A56C01845EF38002E056F /* SVPullToRefresh */,
 			);
@@ -275,6 +301,8 @@
 			children = (
 				589A56B11845E205002E056F /* SentenceCell.h */,
 				589A56B21845E205002E056F /* SentenceCell.m */,
+				615BF5EC1848DC2600A0F53C /* ShiciListCell.h */,
+				615BF5ED1848DC2600A0F53C /* ShiciListCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -293,6 +321,14 @@
 				589A56CA1845F88D002E056F /* SettingsViewController.h */,
 				589A56CB1845F88D002E056F /* SettingsViewController.m */,
 				589A56CC1845F88D002E056F /* SettingsViewController.xib */,
+				615BF5DE1848CAFE00A0F53C /* MenuViewController.h */,
+				615BF5DF1848CAFE00A0F53C /* MenuViewController.m */,
+				615BF5E71848D81400A0F53C /* ShiciListViewController.h */,
+				615BF5E81848D81400A0F53C /* ShiciListViewController.m */,
+				615BF5E91848D81400A0F53C /* ShiciListViewController.xib */,
+				615BF5EF1848E6F700A0F53C /* ShiciDetailViewController.h */,
+				615BF5F01848E6F700A0F53C /* ShiciDetailViewController.m */,
+				615BF5F11848E6F700A0F53C /* ShiciDetailViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -312,6 +348,7 @@
 		58FD75551846DB9800E04485 /* Bmob */ = {
 			isa = PBXGroup;
 			children = (
+				615BF5D81848C7EB00A0F53C /* libBmobSDK.a */,
 				58FD75561846DBA900E04485 /* Bmob.h */,
 				58FD75571846DBA900E04485 /* BmobConfig.h */,
 				58FD75581846DBA900E04485 /* BmobFile.h */,
@@ -319,9 +356,21 @@
 				58FD755A1846DBA900E04485 /* BmobObject.h */,
 				58FD755B1846DBA900E04485 /* BmobQuery.h */,
 				58FD755C1846DBA900E04485 /* BmobUser.h */,
-				58FD755D1846DBA900E04485 /* libBmobSDK.a */,
 			);
 			path = Bmob;
+			sourceTree = "<group>";
+		};
+		615BF5DA1848CA2D00A0F53C /* IIViewDeckController */ = {
+			isa = PBXGroup;
+			children = (
+				615BF5E11848CB7100A0F53C /* IISideController.h */,
+				615BF5E21848CB7100A0F53C /* IISideController.m */,
+				615BF5E31848CB7100A0F53C /* IIWrapController.h */,
+				615BF5E41848CB7100A0F53C /* IIWrapController.m */,
+				615BF5DB1848CA3B00A0F53C /* IIViewDeckController.h */,
+				615BF5DC1848CA3B00A0F53C /* IIViewDeckController.m */,
+			);
+			path = IIViewDeckController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,11 +448,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				615BF5F31848E6F700A0F53C /* ShiciDetailViewController.xib in Resources */,
 				589A564C18459FE0002E056F /* InfoPlist.strings in Resources */,
 				589A56CE1845F88D002E056F /* SettingsViewController.xib in Resources */,
 				589A565718459FE0002E056F /* Images.xcassets in Resources */,
 				589A56961845A12D002E056F /* RootViewController.xib in Resources */,
 				589A56BF1845E90D002E056F /* DetailViewController.xib in Resources */,
+				615BF5EB1848D81400A0F53C /* ShiciListViewController.xib in Resources */,
 				589A56C91845F420002E056F /* data.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,9 +476,14 @@
 			files = (
 				589A56B71845E8E6002E056F /* BaseViewController.m in Sources */,
 				589A56C61845EF38002E056F /* UIScrollView+SVInfiniteScrolling.m in Sources */,
+				615BF5DD1848CA3B00A0F53C /* IIViewDeckController.m in Sources */,
+				615BF5E01848CAFE00A0F53C /* MenuViewController.m in Sources */,
+				615BF5F21848E6F700A0F53C /* ShiciDetailViewController.m in Sources */,
 				58FD75611846EA0D00E04485 /* SentencesReader.m in Sources */,
+				615BF5E61848CB7100A0F53C /* IIWrapController.m in Sources */,
 				589A565218459FE0002E056F /* AppDelegate.m in Sources */,
 				589A56951845A12D002E056F /* RootViewController.m in Sources */,
+				615BF5EA1848D81400A0F53C /* ShiciListViewController.m in Sources */,
 				589A56B31845E205002E056F /* SentenceCell.m in Sources */,
 				589A56CD1845F88D002E056F /* SettingsViewController.m in Sources */,
 				589A56C71845EF38002E056F /* UIScrollView+SVPullToRefresh.m in Sources */,
@@ -437,6 +493,8 @@
 				58BB908B18487BF0006D3C6E /* ShiciReader.m in Sources */,
 				589A56BE1845E90D002E056F /* DetailViewController.m in Sources */,
 				589A565518459FE0002E056F /* Gaoxiaoyulu.xcdatamodeld in Sources */,
+				615BF5EE1848DC2600A0F53C /* ShiciListCell.m in Sources */,
+				615BF5E51848CB7100A0F53C /* IISideController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,7 +619,7 @@
 				INFOPLIST_FILE = "Gaoxiaoyulu/Gaoxiaoyulu-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/wusj/Desktop/Gaoxiaoyulu/Gaoxiaoyulu/libs/Bmob,
+					/Users/sjwu/project/GaoxiaoyuluSource/Gaoxiaoyulu/libs/Bmob,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -580,7 +638,7 @@
 				INFOPLIST_FILE = "Gaoxiaoyulu/Gaoxiaoyulu-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/wusj/Desktop/Gaoxiaoyulu/Gaoxiaoyulu/libs/Bmob,
+					/Users/sjwu/project/GaoxiaoyuluSource/Gaoxiaoyulu/libs/Bmob,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

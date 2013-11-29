@@ -10,6 +10,8 @@
 #import "RootViewController.h"
 #import "BmobQuery.h"
 #import "ShiciReader.h"
+#import "IIViewDeckController.h"
+#import "MenuViewController.h"
 
 @implementation AppDelegate
 
@@ -26,14 +28,21 @@
     
     RootViewController *root = [[RootViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:root];
-    self.window.rootViewController = nav;
+//    self.window.rootViewController = nav;
+    
+    
+    IIViewDeckController *viewDeckController = [[IIViewDeckController alloc] initWithCenterViewController:nav];
+    MenuViewController *menuVC = [[MenuViewController alloc] init];
+    viewDeckController.leftController = menuVC;
+    viewDeckController.leftSize = 100.0;
+    self.window.rootViewController = viewDeckController;
+    
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
 //    [self testBmob];
-    ShiciReader *scReader = [[ShiciReader alloc] init];
-    [scReader readShiciWithPage:1];
+    
     return YES;
 }
 
