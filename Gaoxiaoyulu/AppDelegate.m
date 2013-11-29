@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "RootViewController.h"
 #import "BmobQuery.h"
+#import "ShiciReader.h"
 
 @implementation AppDelegate
 
@@ -31,6 +32,8 @@
     [self.window makeKeyAndVisible];
     
 //    [self testBmob];
+    ShiciReader *scReader = [[ShiciReader alloc] init];
+    [scReader readShiciWithPage:1];
     return YES;
 }
 

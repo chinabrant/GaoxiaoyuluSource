@@ -35,9 +35,6 @@
                 s.time = [obj objectForKey:@"createdAt"];
                 s.author = [obj objectForKey:@"author"];
                 [arr addObject:s];
-                NSLog(@"objectId = %@   content = %@", obj.objectId, [obj objectForKey:@"content"]);
-                NSLog(@"author = %@  time: %@", [obj objectForKey:@"author"], [obj objectForKey:@"updatedAt"]);
-                NSLog(@"-----------------------------------------------------------------------------------------------------");
             }
             
             if (self.delegate && [self.delegate respondsToSelector:@selector(didFinishReaderSentences:)]) {

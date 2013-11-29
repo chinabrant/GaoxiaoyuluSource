@@ -28,8 +28,6 @@
 		589A569A1845A424002E056F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589A56991845A424002E056F /* SystemConfiguration.framework */; };
 		589A569C1845A432002E056F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589A569B1845A432002E056F /* MobileCoreServices.framework */; };
 		589A569E1845A447002E056F /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 589A569D1845A447002E056F /* libz.1.2.5.dylib */; };
-		589A56A51845D381002E056F /* JsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 589A56A41845D381002E056F /* JsonParser.m */; };
-		589A56A91845D497002E056F /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 589A56A81845D497002E056F /* Item.m */; };
 		589A56AC1845D4E6002E056F /* Sentence.m in Sources */ = {isa = PBXBuildFile; fileRef = 589A56AB1845D4E6002E056F /* Sentence.m */; };
 		589A56B31845E205002E056F /* SentenceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 589A56B21845E205002E056F /* SentenceCell.m */; };
 		589A56B71845E8E6002E056F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589A56B61845E8E6002E056F /* BaseViewController.m */; };
@@ -40,6 +38,8 @@
 		589A56C91845F420002E056F /* data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 589A56C81845F420002E056F /* data.txt */; };
 		589A56CD1845F88D002E056F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589A56CB1845F88D002E056F /* SettingsViewController.m */; };
 		589A56CE1845F88D002E056F /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589A56CC1845F88D002E056F /* SettingsViewController.xib */; };
+		58BB908B18487BF0006D3C6E /* ShiciReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BB908A18487BF0006D3C6E /* ShiciReader.m */; };
+		58BB908E18487C93006D3C6E /* Shici.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BB908D18487C93006D3C6E /* Shici.m */; };
 		58FD75501846DB2C00E04485 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FD754F1846DB2C00E04485 /* CoreLocation.framework */; };
 		58FD75521846DB3C00E04485 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FD75511846DB3C00E04485 /* Security.framework */; };
 		58FD75541846DB5700E04485 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FD75531846DB5700E04485 /* CoreTelephony.framework */; };
@@ -83,10 +83,6 @@
 		589A56991845A424002E056F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		589A569B1845A432002E056F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		589A569D1845A447002E056F /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
-		589A56A31845D381002E056F /* JsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonParser.h; sourceTree = "<group>"; };
-		589A56A41845D381002E056F /* JsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonParser.m; sourceTree = "<group>"; };
-		589A56A71845D497002E056F /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
-		589A56A81845D497002E056F /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		589A56AA1845D4E6002E056F /* Sentence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sentence.h; sourceTree = "<group>"; };
 		589A56AB1845D4E6002E056F /* Sentence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sentence.m; sourceTree = "<group>"; };
 		589A56B11845E205002E056F /* SentenceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SentenceCell.h; sourceTree = "<group>"; };
@@ -105,6 +101,10 @@
 		589A56CA1845F88D002E056F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		589A56CB1845F88D002E056F /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		589A56CC1845F88D002E056F /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		58BB908918487BF0006D3C6E /* ShiciReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShiciReader.h; sourceTree = "<group>"; };
+		58BB908A18487BF0006D3C6E /* ShiciReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShiciReader.m; sourceTree = "<group>"; };
+		58BB908C18487C93006D3C6E /* Shici.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shici.h; sourceTree = "<group>"; };
+		58BB908D18487C93006D3C6E /* Shici.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shici.m; sourceTree = "<group>"; };
 		58FD754F1846DB2C00E04485 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		58FD75511846DB3C00E04485 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		58FD75531846DB5700E04485 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -251,10 +251,10 @@
 		589A56A21845D368002E056F /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				589A56A31845D381002E056F /* JsonParser.h */,
-				589A56A41845D381002E056F /* JsonParser.m */,
 				58FD755F1846EA0D00E04485 /* SentencesReader.h */,
 				58FD75601846EA0D00E04485 /* SentencesReader.m */,
+				58BB908918487BF0006D3C6E /* ShiciReader.h */,
+				58BB908A18487BF0006D3C6E /* ShiciReader.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -262,10 +262,10 @@
 		589A56A61845D478002E056F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				589A56A71845D497002E056F /* Item.h */,
-				589A56A81845D497002E056F /* Item.m */,
 				589A56AA1845D4E6002E056F /* Sentence.h */,
 				589A56AB1845D4E6002E056F /* Sentence.m */,
+				58BB908C18487C93006D3C6E /* Shici.h */,
+				58BB908D18487C93006D3C6E /* Shici.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -424,17 +424,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				589A56B71845E8E6002E056F /* BaseViewController.m in Sources */,
-				589A56A91845D497002E056F /* Item.m in Sources */,
 				589A56C61845EF38002E056F /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				58FD75611846EA0D00E04485 /* SentencesReader.m in Sources */,
 				589A565218459FE0002E056F /* AppDelegate.m in Sources */,
 				589A56951845A12D002E056F /* RootViewController.m in Sources */,
 				589A56B31845E205002E056F /* SentenceCell.m in Sources */,
 				589A56CD1845F88D002E056F /* SettingsViewController.m in Sources */,
-				589A56A51845D381002E056F /* JsonParser.m in Sources */,
 				589A56C71845EF38002E056F /* UIScrollView+SVPullToRefresh.m in Sources */,
+				58BB908E18487C93006D3C6E /* Shici.m in Sources */,
 				589A564E18459FE0002E056F /* main.m in Sources */,
 				589A56AC1845D4E6002E056F /* Sentence.m in Sources */,
+				58BB908B18487BF0006D3C6E /* ShiciReader.m in Sources */,
 				589A56BE1845E90D002E056F /* DetailViewController.m in Sources */,
 				589A565518459FE0002E056F /* Gaoxiaoyulu.xcdatamodeld in Sources */,
 			);

@@ -17,6 +17,11 @@
 
 #import <Foundation/Foundation.h>
 
+#define Sentence_Content @"content"
+#define Sentence_Time @"time"
+#define Sentence_Author @"author"
+#define Sentence_ObjectId @"objectId"
+
 @interface Sentence : NSObject
 
 @property (nonatomic, assign) NSInteger sentenceId;
